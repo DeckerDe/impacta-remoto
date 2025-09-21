@@ -2,3 +2,4 @@ Este arquivo faz parte do projeto e foi modificado e fizemos um commit para a no
 
 Fiz algo errado, mas este algo agora está certo.
 Linha geradora de conflito pelo lado collab.
+Mudança geradora de conflito.
