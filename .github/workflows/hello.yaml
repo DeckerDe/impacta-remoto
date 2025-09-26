@@ -1,0 +1,11 @@
+name: Olá Mundo
+
+on: [push]
+
+jobs:
+  ola_mundo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Diga Olá
+        run: echo "Olá, Mundo!"
