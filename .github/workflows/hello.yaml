@@ -1,12 +1,13 @@
 name: Olá Mundo
 
-run-name: Olá Mundo desenvolvimento e produção
+run-name: Olá Mundo separando desenvolvimento e produção
 
 on: [push, workflow_dispatch]
 
 jobs:
   ola_mundo_devl:
     runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/main'
     environment:
       name: devl
 
@@ -16,6 +17,7 @@ jobs:
 
   ola_mundo_prod:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     environment:
       name: prod
 
