@@ -1,11 +1,24 @@
 name: Olá Mundo
 
+run-name: Olá Mundo desenvolvimento e produção
+
 on: [push, workflow_dispatch]
 
 jobs:
-  ola_mundo:
+  ola_mundo_devl:
     runs-on: ubuntu-latest
+    environment:
+      name: devl
 
     steps:
       - name: Diga Olá
-        run: echo "Olá, Mundo!, o segredo confidencial é ${{ secrets.confidencial }}"
+        run: echo "Estamos dando olá ao ambiente de desenvolvimento" >> $GITHUB_STEP_SUMMARY
+
+  ola_mundo_prod:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+
+    steps:
+      - name: Diga Olá
+        run: echo "Estamos dando olá ao ambiente de produção" >> $GITHUB_STEP_SUMMARY
