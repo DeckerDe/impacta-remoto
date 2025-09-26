@@ -8,4 +8,4 @@ jobs:
 
     steps:
       - name: Diga Olá
-        run: echo "Olá, Mundo!"
+        run: echo "Olá, Mundo!, a variável nome do projeto é ${{ vars.nome_projeto }}"
